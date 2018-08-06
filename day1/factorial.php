@@ -1,12 +1,23 @@
 <?php
-	$numFactorial     = $_POST['numFactorial'];
-	$numFactor 	      = 1;
-	$prodFactorial    = 0;
 
-	for ($i=1; $i < $numFactorial ; $numFactorial--) { 
-		$prodFactorial = $numFactor * $numFactorial;
-		$numFactor = $prodFactorial;
+class PracticeFour
+{
+    public function factorial($notation)
+    {
+        $factor  = 1;
+        $product = 0;
 
-	}
-	echo "The factorial of ".$_POST['numFactorial']." is =".$prodFactorial;
-?>
+        for ($counter = 1; $counter < $notation; $notation--) {
+            $product = $factor * $notation;
+            $factor  = $product;
+        }
+
+        return $product;
+    }
+}
+
+$practice_four = new PracticeFour();
+$factorial     = $practice_four->factorial($_POST['numFactorial']);
+
+echo "The factorial of ".$_POST['numFactorial']." is = ".$factorial;
+

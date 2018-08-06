@@ -1,10 +1,19 @@
 <?php
-	for ($i = 1; $i <= 10; $i++) { 
-		if ($i <= 9 ) {
-			echo $i."-";
-		}
-		else {
-			echo $i;
-		}
-	}
-?>
+
+class PracticeOne
+{
+    public function incrementNumber()
+    {
+        for ($counter = 1; $counter <= 10; $counter++) {
+            if ($counter <= 9) {
+                echo $counter."-";
+            } else {
+                echo $counter;
+            }
+        }
+    }
+}
+
+$practice_one = new PracticeOne();
+$practice_one->incrementNumber();
+

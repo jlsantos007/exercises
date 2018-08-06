@@ -1,16 +1,23 @@
-<?php 
-	for ($i=1; $i <= 1000 ; $i++) { 
-		if ($i % 3 === 0 && $i % 5 === 0) {
-			echo "FizzBuzz <br>";
-		}
-		elseif ($i % 3 === 0) {
-			echo "Fizz <br>";
-		}
-		elseif ($i % 5 === 0) {
-			echo "Buzz <br>";
-		}
-		else {
-			echo $i."<br>";
-		}
-	}
-?>
+<?php
+
+class PracticeFive
+{
+    public function multiple()
+    {
+        for ($counter = 1; $counter <= 1000; $counter++) {
+            if ($counter % 3 === 0 && $counter % 5 === 0) {
+                echo "FizzBuzz <br>";
+            } elseif ($counter % 3 === 0) {
+                echo "Fizz <br>";
+            } elseif ($counter % 5 === 0) {
+                echo "Buzz <br>";
+            } else {
+                echo $counter."<br>";
+            }
+        }
+    }
+}
+
+$practice_five = new PracticeFive();
+$practice_five->multiple();
+
