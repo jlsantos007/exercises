@@ -1,19 +1,27 @@
 <?php
 
-    function isPerfectSquare($x) {
+class SquareRoot
+{
+    public function getSquareRoot($notation)
+    {
+        $square_root = sqrt($notation);
 
-    $square_root = sqrt($x);
-
-    return (($square_root - floor($square_root)) == 0);
+        return (($square_root - floor($square_root)) == 0);
     }
 
-    $square_count = 0;
+    public function perfectSquare()
+    {
+        $square_count = 0;
 
-    for ($i=10; $i <= 10000; $i++) { 
-      if (isPerfectSquare($i)) {
-         echo "<option>$i</option>";
-        $square_count++;
-      }
+        for ($counter = 10; $counter <= 10000; $counter++) {
+            if ($this->getSquareRoot($counter)) {
+                echo "<option>$counter</option>";
+                $square_count++;
+            }
+        }
     }
-     
-?>
+}
+
+$square_root = new SquareRoot();
+$square_root->perfectSquare();
+
